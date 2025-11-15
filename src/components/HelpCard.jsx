@@ -6,10 +6,13 @@ export default function HelpCard({
 }) {
   const titleColor = textColor === "white" ? "#86868b" : "#424245";
   const bgTheme = textColor === "white" ? "#1d1d1f" : "white";
-  const heading = subTitle.toLowerCase().replace(/\s+/g, "");
+  const heading = subTitle
+    .toLowerCase()
+    .replaceAll(/[?,']/g, "")
+    .replace(/\s+/g, "");
   return (
     <div
-      className={`w-[309px] h-[450px] drop-shadow-md shrink-0 flex flex-col bg-contain bg-center bg-${bgTheme} rounded-2xl `}
+      className={`w-[309px] h-[450px] drop-shadow-lg shrink-0 flex flex-col bg-contain bg-center bg-${bgTheme} rounded-2xl `}
       style={{ backgroundImage: `url('/help/` + heading + `.png')` }}
     >
       <div className={`p-7 text-${textColor}`}>

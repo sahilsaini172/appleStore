@@ -8,7 +8,7 @@ export default function LatestCard({
   const heading = title.toLowerCase().replace(/\s+/g, "");
   return (
     <div
-      className={`w-[309px] h-[450px] drop-shadow-md shrink-0 flex flex-col bg-contain bg-center bg-${bgTheme} rounded-2xl `}
+      className={`w-[309px] h-[450px] drop-shadow-lg shrink-0 flex flex-col bg-contain bg-center bg-${bgTheme} rounded-2xl `}
       style={{ backgroundImage: `url('/latest/` + heading + `.png')` }}
     >
       <div className={`p-7 text-${textColor}`}>

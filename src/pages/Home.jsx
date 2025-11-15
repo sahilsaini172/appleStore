@@ -1,8 +1,9 @@
-import { ArrowBigUp, ArrowUpRight } from "lucide-react";
+import { ArrowBigUp, ArrowUpRight, CreditCard, RefreshCcw } from "lucide-react";
 import Navbar from "../components/Navbar";
 import CategoryCard from "../components/CategoryCard";
 import LatestCard from "../components/LatestCard";
 import HelpCard from "../components/HelpCard";
+import PaymentOpCard from "../components/PaymentOpCard";
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
             title="iPhone 17 Pro"
             subTitle="All out Pro"
             prize="134900"
+            textColor="white"
           />
           <LatestCard
             title={`MacBook Pro 14`}
@@ -129,20 +131,46 @@ export default function Home() {
           />
           <HelpCard
             title="small business"
-            subTitle="From enterprise to small business, we'll work with you."
+            subTitle="From enterprise to small business, we'll work with you"
             textColor="white"
           />
           <HelpCard
             title="personal setup"
-            subTitle="Set up your new device with help from a Specialist."
+            subTitle="Set up your new device with help from a Specialist"
             description="Let us guide you through data transfer, the latest features and more, in an online, one-to-one session."
             textColor="black"
           />
           <HelpCard
             title="watch and learn"
-            subTitle="Need support? our teams are here for you."
+            subTitle="Need support? our teams are here for you"
             textColor="black"
           />
+        </section>
+      </section>
+      <section className="flex flex-col text-primary">
+        <p className="text-[21px] font-semibold pb-2 px-5.5">
+          The Apple Store difference.{" "}
+          <span className="text-secondary">
+            Even more reasons to shop with us.
+          </span>
+        </p>
+        <section className="flex gap-5 overflow-scroll pt-4 px-5.5 pb-10">
+          <PaymentOpCard
+            color="green"
+            text="No Cost EMI. Plus Instant Cashback."
+          >
+            <CreditCard size={46} />
+          </PaymentOpCard>
+          <PaymentOpCard
+            accentText="Exchange your smartphone, "
+            text="get ₹3350.00-₹64000.00 in credittowards a new one."
+            color={'blue'}
+          >
+            <RefreshCcw size={46} />
+          </PaymentOpCard>
+          <PaymentOpCard text="No Cost EMI. Plus Instant Cashback.">
+            <CreditCard size={46} />
+          </PaymentOpCard>
         </section>
       </section>
     </div>
